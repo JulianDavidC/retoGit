@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite de pruebas" thread-count="2" parallel="tests">
+
+
+    <test name="Test OneObject 200">
+        <parameter name="id" value="/7"></parameter>
+        <parameter name="expectedStatusCode" value="200"></parameter>
+        <classes>
+            <class name="tests.apiPlublica.GetObjects"> </class>
+        </classes>
+    </test>
+    <test name="Test OneObject 404">
+        <parameter name="id" value="/50"></parameter>
+        <parameter name="expectedStatusCode" value="404"></parameter>
+        <classes>
+            <class name="tests.apiPlublica.GetObjects"> </class>
+        </classes>
+    </test>
+
+
+
+</suite>
